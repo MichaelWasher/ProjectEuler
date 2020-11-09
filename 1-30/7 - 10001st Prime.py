@@ -1,24 +1,27 @@
-prime_factors = [2, 3]
+""" Problem 7 - 10001st Prime """
+MAX_PRIME_INDEX = 10001
+PRIME_FACTOR_MAX = 1_000_000
 
-def checkPrime(num):
+prime_numbers = [2]
+
+# Prep the Boolean list for Sieve of Eratosthenes
+prime_num_booleans = [True for i in range(0,PRIME_FACTOR_MAX+1)]
+for i in range(2, PRIME_FACTOR_MAX+1, 2):
+    prime_num_booleans[i] = False
+
+# Prime Number Sieve
+for num in range(3, PRIME_FACTOR_MAX+1, 2):
+    if not prime_num_booleans[num]:
+        continue
+
+    prime_numbers.append(num)
     
-    for prime in prime_factors:
-        if(num % prime == 0):
-            return False
-    
-    return True
-
-prime_index = 10001
-
-x = prime_factors[-1]
-while(True):
-    x += 2
-
-    if(checkPrime(x)):
-        prime_factors.append(x)
-    
-    if(len(prime_factors) == prime_index):
+    if(len(prime_numbers) == MAX_PRIME_INDEX):
         break
+    
+    # Clear all future numbers from being Prime
+    for j in range(num*2, PRIME_FACTOR_MAX+1, num):
+        prime_num_booleans[j] = False
 
-print(prime_factors[-1])
+print(prime_numbers[-1])
    
