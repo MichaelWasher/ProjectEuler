@@ -1,5 +1,6 @@
 # Project Euler Problem Analysis
-NOTE: This repository is not here to provide solutions to the problems on [Project Euler](https://projecteuler.net/archives) but rather as a learning reference when stuck.
+NOTE: This repository is not here to provide solutions to the problems on [Project Euler](https://projecteuler.net/archives) but rather as a learning reference when stuck. This repository will also not contain any solutions for questions above 100, in accordance with the wishes of the Project Euler team [reference](https://projecteuler.chat/viewtopic.php?t=6431) but will be available upon request.
+
 Please use this repository as a guide and learning material for problems that you may be stuck on.
 Project Euler is a website for learning and you will gain no benefit in your math / programming ability by copying the answers provided here.
 

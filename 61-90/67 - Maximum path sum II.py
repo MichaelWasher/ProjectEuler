@@ -1,0 +1,1 @@
+# The solution to this question is the same as that provided in 18.
