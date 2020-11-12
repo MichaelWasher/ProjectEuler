@@ -1,3 +1,13 @@
+"""
+Problem 11 - Largest product in a grid
+-------------------------------------------------------------------------------
+In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
+#TODO provided in resources
+The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
+What is the greatest product of four adjacent numbers in the same direction
+(up, down, left, right, or diagonally) in the 20×20 grid?
+"""
+
 from functools import reduce
 import numpy as np
 
@@ -69,7 +79,7 @@ diagonal_forward_products = list(map(getMaxForArray, diagonal_forard_np_grid))
 max_diagonal_forward_product = max(diagonal_forward_products) 
 
 # Get reverse diagonal by flipping x axis
-reverse_np_grid = np.flip(np.array(grid).copy(), axis=1]
+reverse_np_grid = np.flip(np.array(grid).copy(), axis=1)
 diagonal_reverse_np_grid = getDiagonalOptions(reverse_np_grid)
 diagonal_reverse_products = list(map(getMaxForArray, diagonal_reverse_np_grid))
 max_diagonal_reverse_product = max(diagonal_reverse_products)

@@ -1,4 +1,12 @@
-""" 41 - Pandigital Primes"""
+"""
+Problem 41 - Pandigital Primes
+-------------------------------------------------------------------------------
+We shall say that an n-digit number is pandigital if it makes use of all the digits 1 to n exactly once.
+For example, 2143 is a 4-digit pandigital and is also prime.
+
+What is the largest n-digit pandigital prime that exists?
+"""
+
 import math
 # Create Sieve for all Primes up to sqrt(n)
 MAX_PANDIGITAL_NUMBER = 987_654_321

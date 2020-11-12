@@ -1,4 +1,10 @@
-from functools import reduce 
+"""
+Problem 13 - Large sum
+-------------------------------------------------------------------------------
+Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
+TODO Provided in resources
+"""
+from functools import reduce
 
 big_numbers = [
     37107287533902102798797998220837590246510135740250,
