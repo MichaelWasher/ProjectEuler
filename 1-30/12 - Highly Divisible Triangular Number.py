@@ -37,13 +37,13 @@ def calculateDivisors(number):
             break
 
         prime_exponent = 0
+        # Check if prime is a factor by testing modulo
         while(tmp_number % prime == 0):
             tmp_number /= prime
             prime_exponent += 1
 
         sum_prime_exponents[prime] = prime_exponent + 1
         # print(f'Prime: {prime} Exponent: {sum_prime_exponents[prime]}')
-        # Chop the numbers with primes
     
     total_divisors = 1
     for key in sum_prime_exponents.keys():
@@ -51,7 +51,7 @@ def calculateDivisors(number):
 
     return total_divisors
 
-# print(calculateDivisors(76576500))
+
 triangle_number = 0
 i = 0
 while(True):

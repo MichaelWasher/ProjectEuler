@@ -6,7 +6,7 @@ CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 RESOURCE_FOLDER = os.path.join(CURRENT_DIR, '../', 'resources')
 
 # Variables
-input_file = RESOURCE_FOLDER + '/' + '22_names.txt'
+input_file = os.join(RESOURCE_FOLDER + '/' + '22_names.txt')
 names = []
 name_character_values = []
 name_scores = []
