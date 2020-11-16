@@ -16,6 +16,8 @@ coins = [1, 2, 5, 10, 20, 50, 100, 200]
 DESIRED_SUM = 200
 
 path_count = 0
+
+
 def createCoinSolution(current_path, coins_left, current_sum):
     global path_count
     next_path = None
@@ -37,6 +39,7 @@ def createCoinSolution(current_path, coins_left, current_sum):
 
             next_coins_left.remove(coin)
     return None
+
 
 createCoinSolution("", coins, 0)
 print(f'Path Count: {path_count}')

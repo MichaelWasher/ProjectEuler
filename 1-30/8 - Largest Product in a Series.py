@@ -14,15 +14,14 @@ number_array = list(map(int, numString))
 # # While there are still numbers to process
 max = 0
 max_adjacent_numbers = []
-while(len(number_array) >= adjacent_length):
+while (len(number_array) >= adjacent_length):
     adjacent_numbers = number_array[0:adjacent_length]
     product = reduce(lambda a, b: a * b, adjacent_numbers)
 
-    if(product > max):
+    if (product > max):
         max = product
         max_adjacent_numbers = adjacent_numbers
     del number_array[0]
-
 
 print("Adjacent Numbers: " + str(max_adjacent_numbers))
 print("Value: " + str(max))

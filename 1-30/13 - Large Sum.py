@@ -109,6 +109,6 @@ big_numbers = [
     53503534226472524250874054075591789781264330331690,
 ]
 
-sum = reduce(lambda a, b: a+b, big_numbers)
+sum = reduce(lambda a, b: a + b, big_numbers)
 first_ten_digits = str(sum)[0:10]
 print(first_ten_digits)

@@ -5,7 +5,7 @@ Problem 16 - Power Digit Sum
 
 What is the sum of the digits of the number 2^1000?
 """
-power_number = 2**1000
+power_number = 2 ** 1000
 digit_sum = 0
 for c in str(power_number):
     digit_sum += int(c)

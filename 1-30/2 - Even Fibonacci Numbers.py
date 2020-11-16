@@ -10,7 +10,7 @@ find the sum of the even-valued terms.
 """
 
 # Iteratively count in the Fibonacci sequence.
-# This must take an iterative approach to avoid an stack-overflow or recursion-depth issues.
+# This must use an iterative approach to avoid an stack-overflow or recursion-depth issues.
 UPPER_LIMIT = 4_000_000
 
 low_pointer = 1
@@ -19,13 +19,12 @@ sum_of_even_fibonacci_numbers = 0
 while (high_pointer < UPPER_LIMIT):
 
     #
-    if(high_pointer % 2 == 0):
+    if (high_pointer % 2 == 0):
         sum_of_even_fibonacci_numbers += high_pointer
 
     # Next value
     tmp = high_pointer
     high_pointer += low_pointer
     low_pointer = tmp
-
 
 print(sum_of_even_fibonacci_numbers)

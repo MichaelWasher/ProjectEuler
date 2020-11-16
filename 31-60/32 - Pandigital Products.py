@@ -12,13 +12,15 @@ HINT: Some products can be obtained in more than one way so be sure to only incl
 """
 MAX_MULTIPLIER = 9
 # Build factors sieve of numbers up to 100_000
-digit_options = ['1','2','3','4','5','6','7','8','9']
+digit_options = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 product_sum = 0
 products = {}
+
+
 def checkMultiples(pandigital):
     global product_sum
     for i in range(1, 5):
-        for j in range(1, 6-i):
+        for j in range(1, 6 - i):
             if i + j > 5:
                 continue
             tmp_pandigital = pandigital
@@ -35,6 +37,7 @@ def checkMultiples(pandigital):
                 print(f'{multiplicand} * {multiplier} = {tmp_pandigital}')
                 return True
     return False
+
 
 # test_pandigital = 391867254
 # checkMultiples(str(test_pandigital))
@@ -54,6 +57,7 @@ def getPandigitalNumbers(test_pandigital, digit_options):
         digit_options.insert(i, tmp_value)
 
     return
+
 
 getPandigitalNumbers("", digit_options)
 

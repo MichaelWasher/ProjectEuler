@@ -10,15 +10,14 @@ is the 938th name in the list. So, COLIN would obtain a score of 938 × 53 = 497
 
 What is the total of all the name scores in the file?
 """
-import re
-from functools import reduce
 import os
+import re
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 RESOURCE_FOLDER = os.path.join(CURRENT_DIR, '../', 'resources')
 
 # Variables
-input_file = os.join(RESOURCE_FOLDER + '/' + '22_names.txt')
+input_file = os.path.join(RESOURCE_FOLDER + '/' + '22_names.txt')
 names = []
 name_character_values = []
 name_scores = []

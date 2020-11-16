@@ -6,10 +6,11 @@ What is the largest prime factor of the number 600851475143 ?
 """
 import math
 
+
 def getPrimeFactors(number):
     prime_numbers = []
     # Ignore even numbers
-    while(number % 2 == 0):
+    while (number % 2 == 0):
         prime_numbers.append(number)
         number = number / 2
 

@@ -20,13 +20,13 @@ Find the sum of all the positive integers which cannot be written as the sum of 
 
 MAX_NUMBER = 28123
 # All numbers are marked with 0 divisors
-number_of_divisors = [0 for i in range(0, MAX_NUMBER+1)]
-divisor_chains = [[] for i in range(0, MAX_NUMBER+1)]
-divisor_sums = [0 for i in range(0, MAX_NUMBER+1)]
+number_of_divisors = [0 for i in range(0, MAX_NUMBER + 1)]
+divisor_chains = [[] for i in range(0, MAX_NUMBER + 1)]
+divisor_sums = [0 for i in range(0, MAX_NUMBER + 1)]
 
 # Build Block of all divisors
-for num in range(1, MAX_NUMBER+1):
-    for j in range(num*2, MAX_NUMBER+1, num):
+for num in range(1, MAX_NUMBER + 1):
+    for j in range(num * 2, MAX_NUMBER + 1, num):
         number_of_divisors[j] += 1
         divisor_chains[j].append(num)
         divisor_sums[j] += num
@@ -34,7 +34,7 @@ for num in range(1, MAX_NUMBER+1):
 deficient_numbers = {}
 abundant_numbers = {}
 perfect_numbers = {}
-for i in range(MAX_NUMBER+1):
+for i in range(MAX_NUMBER + 1):
     if i > divisor_sums[i]:
         deficient_numbers[i] = divisor_sums[i]
     if i < divisor_sums[i]:
@@ -42,9 +42,10 @@ for i in range(MAX_NUMBER+1):
     if i == divisor_sums[i]:
         perfect_numbers[i] = divisor_sums[i]
 
+
 # Find Pair ---------------------------------------
 def findPair(test_value):
-    for i in range(test_value+1):
+    for i in range(test_value + 1):
         if i not in abundant_numbers:
             continue
 
@@ -57,7 +58,7 @@ def findPair(test_value):
 
 
 sum = 0
-for i in range(1, MAX_NUMBER+1):
+for i in range(1, MAX_NUMBER + 1):
     if findPair(i):
         sum += i
 print(sum)

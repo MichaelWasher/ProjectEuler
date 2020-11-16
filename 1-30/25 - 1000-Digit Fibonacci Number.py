@@ -36,8 +36,6 @@ while digit_total < 1000:
     first_num = fib_num
     digit_total = len(str(fib_num))
     index += 1
-    
-print("Index: " + str(index))
-print("Fib: "  + str(fib_num))
 
-    
+print("Index: " + str(index))
+print("Fib: " + str(fib_num))

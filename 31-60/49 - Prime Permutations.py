@@ -39,12 +39,13 @@ def isPermutation(input1, input2):
     used_digit = [0 for i in range(10)]
 
     for digit in str(input1):
-        used_digit[int(digit)] +=1
+        used_digit[int(digit)] += 1
 
     for digit in str(input2):
         used_digit[int(digit)] -= 1
 
     return max(used_digit) == 0
+
 
 # permutations = createPermutations("", ['1','4','8','7'])
 # print(permutations)
@@ -54,11 +55,10 @@ for prime in prime_numbers:
     if 10_000 > prime > 999:
         viable_primes[prime] = True
 
-
 for prime in viable_primes.keys():
     # print(prime)
     prime_count = 0
-    first_addition = prime+3330
+    first_addition = prime + 3330
     second_addition = prime + 6660
     if first_addition in viable_primes:
         if second_addition in viable_primes:
@@ -79,5 +79,5 @@ for prime in viable_primes.keys():
     # if prime_count > 2:
     #     print(prime_count)
 # # Check Prime numbers ag
-#ainst eachother for permutations
+# ainst eachother for permutations
 296962999629

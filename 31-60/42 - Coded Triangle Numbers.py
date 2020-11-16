@@ -18,6 +18,7 @@ CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 RESOURCE_FOLDER = os.path.join(CURRENT_DIR, '../', 'resources')
 input_file = os.path.join(RESOURCE_FOLDER, '42_words.txt')
 
+
 def getCharacterValue(input_string):
     sum = 0
     # ASCII Offset
@@ -25,6 +26,7 @@ def getCharacterValue(input_string):
     for c in input_string:
         sum += ord(c) + offset
     return sum
+
 
 # Injest the WordList from Resources
 # Keep length of longest word
@@ -39,9 +41,9 @@ print(words)
 # Max Triangle Number Required will be 26 * length_of_word; Due to Alpha -> Number conversion
 max_triangle_number = 26 * max_word_length
 triangle_numbers = {}
-#tn = ½n(n+1)
-for i in range(1, max_triangle_number +1):
-    tn = (i * 0.5 ) * (i +1)
+# tn = ½n(n+1)
+for i in range(1, max_triangle_number + 1):
+    tn = (i * 0.5) * (i + 1)
     triangle_numbers[int(tn)] = True
 
 print(triangle_numbers)

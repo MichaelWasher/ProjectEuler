@@ -8,13 +8,14 @@ What is the largest n-digit pandigital prime that exists?
 """
 
 import math
+
 # Create Sieve for all Primes up to sqrt(n)
 MAX_PANDIGITAL_NUMBER = 987_654_321
-MAX_PRIME = int(math.sqrt(MAX_PANDIGITAL_NUMBER)) +1
+MAX_PRIME = int(math.sqrt(MAX_PANDIGITAL_NUMBER)) + 1
 # Prep the Boolean list for Sieve of Eratosthenes
 prime_num_booleans = [True for i in range(0, MAX_PRIME + 1)]
 prime_numbers = [2]
-digit_options = ['9','8','7','6','5','4','3','2','1']
+digit_options = ['9', '8', '7', '6', '5', '4', '3', '2', '1']
 
 for i in range(2, MAX_PRIME + 1, 2):
     prime_num_booleans[i] = False
@@ -38,6 +39,7 @@ def isPrime(test_prime):
             return False
     return True
 
+
 def getPandigitalNumbers(test_pandigital, digit_options):
     digit_count = len(digit_options)
     # Perform checks on pandigital numbers
@@ -58,4 +60,4 @@ def getPandigitalNumbers(test_pandigital, digit_options):
 
 
 for i in range(1, 10):
-    getPandigitalNumbers("", [str(j) for j in range(1, i+1)])
+    getPandigitalNumbers("", [str(j) for j in range(1, i + 1)])

@@ -15,9 +15,11 @@ A leap year occurs on any year evenly divisible by 4, but not on a century unles
 
 How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 """
+
 months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november',
           'december']
 days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+
 days_in_month = {
     months[0]: 31,
     months[1]: 28,
@@ -62,7 +64,7 @@ def getCurrentDay(offset_days):
     return total_day_offset % 7
 
 
-# ---------------- Start Problem -----------------
+# ---------------- Problem Script -----------------
 total_day_offset = 0
 start_year = 1900
 end_year = 2000
@@ -71,11 +73,10 @@ year_offset = 0
 # Travel to 1/1/1901
 if checkLeapYear(start_year):
     total_day_offset += 1
-
 total_day_offset += 365
 year_offset = 1
 
-# Get Day
+# While not in the final year, keep interating
 sunday_sum = 0
 while (start_year + year_offset) <= end_year:
 

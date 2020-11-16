@@ -11,15 +11,17 @@ Find the sum of all numbers, less than one million, which are palindromic in bas
 MAX = 1_000_000
 double_palindromes = []
 
+
 # Helper Functions -----------------------------------------
 def isPalindromic(string_value):
-    for  i in range(0, int((len(string_value) + 1) / 2)):
-        if string_value[i] != string_value[(i +1) * -1]:
+    for i in range(0, int((len(string_value) + 1) / 2)):
+        if string_value[i] != string_value[(i + 1) * -1]:
             return False
     return True
 
+
 # Script Functions -----------------------------------------
-for num in range(MAX +1):
+for num in range(MAX + 1):
     if not isPalindromic(str(num)):
         continue
     bin_num = bin(num)
